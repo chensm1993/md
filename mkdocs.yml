@@ -1,0 +1,7 @@
+site_name: MkDocs
+pages:
+    - Home: index.md
+    - About: about.md
+theme: flatly
+extra:
+    theme_inverse: true

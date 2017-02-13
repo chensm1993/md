@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="./img/favicon.ico">
+
+	<title>MkDocs</title>
+
+        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/highlight.css">
+        <link href="./css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href=".">MkDocs</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li class="active">
+                    <a href=".">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="about/">About</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                <li class="disabled">
+                    <a rel="next" >
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="about/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#mkdocs">MkDocs</a></li>
+        
+            <li><a href="#mkdocs_1">关于MkDocs</a></li>
+        
+            <li><a href="#python">安装Python</a></li>
+        
+            <li><a href="#pip">pip安装</a></li>
+        
+            <li><a href="#mkdocs_2">安装MkDocs</a></li>
+        
+            <li><a href="#_1">开始</a></li>
+        
+            <li><a href="#_2">添加页面</a></li>
+        
+            <li><a href="#_3">配置主题</a></li>
+        
+            <li><a href="#_4">站点生成</a></li>
+        
+            <li><a href="#_5">发布</a></li>
+        
+            <li><a href="#iis">使用IIS时相关问题解决方案</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="mkdocs">MkDocs</h1>
+<h2 id="mkdocs_1">关于MkDocs</h2>
+<ul>
+<li>概述<ul>
+<li>文档源文件写在Markdown，用一个单一的YAML配置文件配置；</li>
+<li>完全静态HTML网站；</li>
+<li>可选内置的主题:mkdocs和readthedocs,或在mkdocs wiki中的选择第三方主题,或建立自己的主题。</li>
+</ul>
+</li>
+<li>安装方式 - 可用Python安装pip，然后用pip安装MkDocs。</li>
+<li>Python版本 - MkDocs支持Python版本2.6,2.7,3.3,3.4,3.5。</li>
+</ul>
+<h2 id="python">安装Python</h2>
+<ul>
+<li>通过从python.org下载一个适合于系统的安装程序并运行它。如：<a href="https://www.python.org/downloads/release/python-2713/">Python2.7</a>.<ul>
+<li><img alt="Python-2713" src="./img/python-2713.png" /></li>
+<li>PS：如果你在Windows上安装Python,一定要检查是否有Python添加到路径,如果安装程序提供了这样一个选项(默认是正常关闭)，安装时将此选项打开。</li>
+<li><img alt="PythonInstall" src="./img/pythonInstall.png" /></li>
+<li>检查是否已安装python版本：<code>python --version</code></li>
+<li><img alt="Img1" src="./img/img1.png" /></li>
+</ul>
+</li>
+</ul>
+<h2 id="pip">pip安装</h2>
+<ul>
+<li>如果您使用的是最新版本的Python,Python有可能是默认安装pip。<ul>
+<li>检查版本：<code>pip --version</code></li>
+<li><img alt="Img2" src="./img/img2.png" /></li>
+</ul>
+</li>
+<li>升级pip到最新版本:<code>pip install --upgrade pip</code>    <ul>
+<li><img alt="Img3" src="./img/img3.png" /></li>
+<li>PS：如果第一次安装pip，下载get-pip.py。然后运行下面的命令来安装它:<code>python get-pip.py</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="mkdocs_2">安装MkDocs</h2>
+<ul>
+<li>使用pip安装mkdocs，运行命令:<code>pip install mkdocs</code></li>
+<li><img alt="Img4" src="./img/img4.png" /></li>
+<li>运行命令检查mkdocs版本：<code>mkdocs --version</code></li>
+<li><img alt="Img5" src="./img/img5.png" /></li>
+<li>注意：<ul>
+<li>如果使用的是Windows，一些上面的命令可能不会工作，快速的解决方案可能是以<code>Python - m</code>开始的每个如下的Python命令:<ul>
+<li><code>python -m pip install mkdocs</code></li>
+<li><code>python -m mkdocs</code></li>
+</ul>
+</li>
+<li>作为一个永久的解决方案,您可能需要编辑你的包含Python安装的脚本目录的PATH环境变量。最新版本的Python包含一个脚本为你这样做。导航到您的Python安装目录(例如C:\Python34),打开工具,然后是脚本文件夹,通过双击运行win_add2path.py文件。或者,您可以下载该脚本并运行它(python win_add2path.py)。</li>
+</ul>
+</li>
+</ul>
+<h2 id="_1">开始</h2>
+<ul>
+<li>运行<ul>
+<li>创建一个Mkdocs项目：<code>mkdocs new my-project</code></li>
+<li><img alt="Img6" src="./img/img6.png" /></li>
+<li>定位到该项目：<code>cd my-project</code></li>
+<li><img alt="Img7" src="./img/img7.png" /></li>
+<li><img alt="Img8" src="./img/img8.png" /></li>
+<li><img alt="Img9" src="./img/img9.png" /></li>
+<li>有一个名为mkdocs.yml简单配置文件和一个名为docs将包含你的文档源文件的文件夹。现在docs文件夹只包含一个名为index.md的文档页面。</li>
+</ul>
+</li>
+<li>MkDocs带有一个内置的dev-server让你工作时预览文档。确保在和mkdocs.yml配置文件相同的目录中,然后通过运行mkdocs服务命令启动服务器:<ul>
+<li>打开该项目服务器：<code>mkdocs serve</code></li>
+<li><img alt="Img10" src="./img/img10.png" /></li>
+</ul>
+</li>
+<li>在浏览器中打开<code>http://127.0.0.1:8000</code>,您将看到默认主页显示。<ul>
+<li><img alt="Img11" src="./img/img11.png" /></li>
+</ul>
+</li>
+<li>dev-server还支持auto-reloading,并当配置文件、文档目录、主题目录在任何时候发生变化时重建你的文档。</li>
+<li>在你选择的文本编辑器中打开docs/index.md文档,改变内容,并保存你的更改。浏览器会自动重载,你可立即看到你更新文档。<ul>
+<li><img alt="Img14" src="./img/img14.png" /></li>
+<li><img alt="Img15" src="./img/img15.png" /></li>
+</ul>
+</li>
+<li>现在试着编辑配置文件:mkdocs.yml。更改MkLorum网站名称设置并保存文件。<ul>
+<li><code>site_name: MkLorum</code></li>
+<li><img alt="Img13" src="./img/img13.png" /></li>
+<li>（PS:<code>site_name:</code>与<code>MkLorum</code>之间要有空格。）</li>
+</ul>
+</li>
+<li>浏览器应立即重新加载,你会看到你的新网站名称生效。</li>
+</ul>
+<h2 id="_2">添加页面</h2>
+<pre><code>site_name: MkDocs
+pages:
+    - Home: index.md
+    - About: about.md
+</code></pre>
+<h2 id="_3">配置主题</h2>
+<ul>
+<li>可以在配置文件中修改文档主题. 在 mkdocs.yml 中添加<code>theme: readthedocs</code></li>
+</ul>
+<h2 id="_4">站点生成</h2>
+<ul>
+<li>通过<code>mkdocs build</code>命令生成文档，创建了一个<code>site</code>新目录。<ul>
+<li><img alt="Img16" src="./img/img16.png" /></li>
+<li><img alt="Img17" src="./img/img17.png" /></li>
+<li><img alt="Img18" src="./img/img18.png" /></li>
+<li>注意源码被分别输出为<code>index.html</code>和<code>about/index.html</code>。主题中的其他文件也被复制到了<code>site</code>目录中。</li>
+</ul>
+</li>
+<li>一段时间后, 可能有文件被从源码中移除了, 但是相关的文档仍残留在<code>site</code>目录中. 在构建命令中添加<code>--clean</code>参数即可移除这些文档:<code>mkdocs build --clean</code>.<ul>
+<li><img alt="Img19" src="./img/img19.png" /></li>
+</ul>
+</li>
+</ul>
+<h2 id="_5">发布</h2>
+<ul>
+<li>MkDocs 生成的文档只包含静态文件, 因此你可以将文档部署到任意地方. GitHub project pages 和 Amazon S3 是不错的选择. 只需上传<code>site</code>目录到你需要发布的位置即可.</li>
+</ul>
+<h2 id="iis">使用IIS时相关问题解决方案</h2>
+<ul>
+<li>浏览时由于权限不足而无法读取配置文件：<ul>
+<li>对根目录<code>site</code> 右击属性-安全，然后添加权限<code>IUSR</code>和<code>IIS_IUSRS</code></li>
+<li><img alt="Solution1" src="./img/solution1.png" /></li>
+</ul>
+</li>
+<li>IIS映射问题导致<code>.mustache</code>格式文件无法访问，解决方法:
+    <em>定位到IIS安装目录<code>cd C:\WINDOWS\system32\inetsrv</code>
+    </em>输入命令<code>C:\Windows\System32\inetsrv&gt;appcmd set config /section:staticContent /+[fileExtension='.mustache',mimeType='text/plain']</code><ul>
+<li><img alt="Solution1" src="./img/solution1.png" />
+<em>搜索功能不支持中文问题，解决方法如下：
+</em>安装目录<code>Python\Lib\site-packages\mkdocs\assets\search\mkdocs\js</code>下重写<code>lunr.min.js</code>文件。</li>
+</ul>
+</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="./js/jquery-1.10.2.min.js"></script>
+        <script src="./js/bootstrap-3.0.3.min.js"></script>
+        <script src="./js/highlight.pack.js"></script>
+        <script>var base_url = '.';</script>
+        <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
+        <script src="./js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
